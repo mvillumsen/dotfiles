@@ -7,6 +7,7 @@
   - ~/.zpreztorc: zpreztorc
   - ~/.zshrc: zshrc
   - ~/.vimrc: vim/vimrc
+  - ~/.zprezto/modules/prompt/functions/prompt_steeef-custom_setup: prompt_steeef-custom_setup
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
