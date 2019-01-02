@@ -1,0 +1,106 @@
+#
+# A theme based on Steve Losh's Extravagant Prompt with vcs_info integration.
+#
+# Authors:
+#   Steve Losh <steve@stevelosh.com>
+#   Bart Trojanowski <bart@jukie.net>
+#   Brian Carper <brian@carper.ca>
+#   stiiif <stiiif@gmail.com>
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+# Screenshots:
+#   http://i.imgur.com/HyRvv.png
+
+k8s_info() {
+  if [ ! -z ${KUBECONFIG} ]; then
+    k8s_context=$(awk '/current-context/{print $2}' $KUBECONFIG)
+  elif [ -f "$HOME/.kube/config" ]; then
+    k8s_context=$(awk '/current-context/{print $2}' $HOME/.kube/config)
+  fi
+  if [ ! -z ${k8s_context} ]; then
+    k8s_namespace=$(kubectl config view --minify --output 'jsonpath={..namespace}')
+    k8s_namespace="${k8s_namespace:-default}"
+    echo " %F{033}[⎈ $k8s_context %F{81}$k8s_namespace%F{033}]"
+  fi
+}
+
+function aws_info {
+  if [ ! -z $AWS_PROFILE ]; then
+    echo " %F{214}[☁ $AWS_PROFILE]"
+  fi
+}
+
+# enable VCS systems you use
+zstyle ':vcs_info:*' enable git svn
+
+# check-for-changes can be really slow.
+# you should disable it, if you work with large repositories
+zstyle ':vcs_info:*:prompt:*' check-for-changes true
+
+function prompt_stiiif_precmd {
+  # Check for untracked files or updated submodules since vcs_info does not.
+  if git ls-files --other --exclude-standard 2> /dev/null | grep -q "."; then
+      FMT_BRANCH="(%{$turquoise%}%b%u%c%{$hotpink%}●${PR_RST})"
+  else
+      FMT_BRANCH="(%{$turquoise%}%b%u%c${PR_RST})"
+  fi
+  zstyle ':vcs_info:*:prompt:*' formats " ${FMT_BRANCH}"
+
+  vcs_info 'prompt'
+
+  # Define prompts
+  PROMPT="
+%{$limegreen%}%~$(k8s_info)$(aws_info)%f"'${vcs_info_msg_0_}'"
+▶ "
+  RPROMPT=''
+}
+
+function prompt_stiiif_setup {
+  #use extended color pallete if available
+  if [[ $terminfo[colors] -ge 256 ]]; then
+      turquoise="%F{81}"
+      orange="%F{166}"
+      purple="%F{135}"
+      hotpink="%F{161}"
+      limegreen="%F{118}"
+      blue="%F{027}"
+  else
+      turquoise="%F{cyan}"
+      orange="%F{yellow}"
+      purple="%F{magenta}"
+      hotpink="%F{red}"
+      limegreen="%F{green}"
+      blue="%F{blue}"
+  fi
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+  autoload -Uz vcs_info
+
+  prompt_opts=(cr percent sp subst)
+
+  # Add hook for calling vcs_info before each command.
+  add-zsh-hook precmd prompt_stiiif_precmd
+
+  # set formats
+  # %b - branchname
+  # %u - unstagedstr (see below)
+  # %c - stagedstr (see below)
+  # %a - action (e.g. rebase-i)
+  # %R - repository path
+  # %S - path in the repository
+  PR_RST="%f"
+  FMT_BRANCH="(%{$turquoise%}%b%u%c${PR_RST})"
+  FMT_ACTION="(%{$limegreen%}%a${PR_RST})"
+  FMT_UNSTAGED="%{$orange%}●"
+  FMT_STAGED="%{$limegreen%}●"
+
+  zstyle ':vcs_info:*:prompt:*' unstagedstr   "${FMT_UNSTAGED}"
+  zstyle ':vcs_info:*:prompt:*' stagedstr     "${FMT_STAGED}"
+  zstyle ':vcs_info:*:prompt:*' actionformats "${FMT_BRANCH}${FMT_ACTION}"
+  zstyle ':vcs_info:*:prompt:*' formats       "${FMT_BRANCH}"
+  zstyle ':vcs_info:*:prompt:*' nvcsformats   ""
+}
+
+prompt_stiiif_setup "$@"
+
