@@ -1,10 +1,10 @@
 # Remember configs: git, terminal (font, color theme etc.), VS Code, Sublime, JetBrains toolbox, Adobe toolbox
-
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap 'mas-cli/tap'
 tap 'caskroom/cask'
+tap "mas-cli/tap"
 
 # Install apps using brew-cask
 cask '1password'
@@ -22,12 +22,12 @@ cask 'sublime-text'
 cask 'visual-studio-code'
 cask 'dropbox'
 
+# Installing apps using brew
 brew 'mas'
 brew 'docker'
 brew 'docker-compose'
 brew 'docker-machine'
 brew 'tig'
-#brew 'zsh'
 brew 'node'
 brew 'npm'
 brew 'htop'
@@ -35,66 +35,17 @@ brew "ansible"
 brew "ansible-lint"
 brew "openssl"
 brew "awscli"
-
-brew "adns"
-brew "gdbm"
-brew "libyaml"
-brew "readline"
-brew "sqlite"
-#brew "python@2"
-#brew "python"
-brew "augeas"
-brew "xz"
-brew "dialog"
-brew "certbot"
 brew "colordiff"
-brew "docker-machine"
-brew "libev"
-brew "docker-machine-driver-xhyve"
 brew "fzf"
-brew "gettext"
 brew "git"
 brew "git-flow"
-brew "libffi"
-brew "pcre"
-brew "gmp"
-brew "libtasn1"
-brew "libunistring"
-brew "nettle"
-brew "p11-kit"
-brew "gnutls"
-brew "libgpg-error"
-brew "libassuan"
-brew "libgcrypt"
-brew "libksba"
-brew "libusb"
-brew "npth"
-brew "pinentry"
-brew "gnupg"
 brew "gradle"
-brew "groovysdk"
-brew "icu4c"
-brew "jetty"
-brew "jfrog-cli-go"
-brew "oniguruma"
 brew "jq"
 brew "kubernetes-cli"
-brew "kops"
 brew "kubernetes-helm"
-brew "libidn2"
-brew "libtool"
 brew "maven"
-brew "mysql"
 brew "nmap"
-brew "node"
-brew "openssl@1.1"
 brew "perl"
-brew "pinentry-mac"
-brew "pkg-config"
-brew "postgresql"
-brew "pre-commit"
-brew "pwgen"
-brew "rancher-cli"
 brew "ruby", link: true
 brew "sshfs"
 brew "telnet"
@@ -106,8 +57,14 @@ brew "watch"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
-brew "weaveworks/tap/eksctl"
 cask "cyberduck"
-cask "graphql-playground"
 
-#mas 'AdBlock', id: 1234
+# Installing apps using App Store CLI
+mas "AdBlock", id: 1402042596
+mas "BetterSnapTool", id: 417375580
+mas "JPEGmini Lite", id: 525742250
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Skitch", id: 425955336
+mas "TinyExpander", id: 444088290
+mas "Wunderlist", id: 410628904
