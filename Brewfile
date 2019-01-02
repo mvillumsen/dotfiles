@@ -25,6 +25,7 @@ cask 'dropbox'
 
 # Installing apps using brew
 brew 'mas'
+brew 'nomad'
 brew 'docker'
 brew 'docker-compose'
 brew 'docker-machine'
