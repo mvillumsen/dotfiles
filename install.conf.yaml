@@ -13,6 +13,7 @@
     ~/.zshrc: zshrc
     ~/.vimrc: vim/vimrc
     ~/.zprezto/modules/prompt/functions/prompt_steeef-custom_setup: prompt_steeef-custom_setup
+    ~/Library/Application\ Support/Code/User/settings.json: vscode/settings.json
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
