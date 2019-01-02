@@ -9,6 +9,7 @@ tap "mas-cli/tap"
 # Install apps using brew-cask
 cask '1password'
 cask 'font-hack-nerd-font'
+cask 'jetbrains-toolbox'
 cask 'sshfs'
 cask 'charles'
 cask 'iterm2'
