@@ -1,0 +1,13 @@
+[alias]
+	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	unstage = reset HEAD --
+[user]
+	name = Martin Villumsen
+	email = mvil@tv2.dk
+[core]
+	excludesfile = /Users/mvil/.gitignore
+	editor = /usr/local/bin/vim
