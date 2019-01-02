@@ -1,16 +1,19 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~']
 
 - link:
-  - ~/.gitconfig: git/gitconfig
-  - ~/.gitignore: git/gitignore
-  - ~/.zprezto: prezto
-  - ~/.zpreztorc: zpreztorc
-  - ~/.zshrc: zshrc
-  - ~/.vimrc: vim/vimrc
-  - ~/.zprezto/modules/prompt/functions/prompt_steeef-custom_setup: prompt_steeef-custom_setup
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.zprezto: prezto
+    ~/.zpreztorc: zpreztorc
+    ~/.zshrc: zshrc
+    ~/.vimrc: vim/vimrc
+    ~/.zprezto/modules/prompt/functions/prompt_steeef-custom_setup: prompt_steeef-custom_setup
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
-  - [/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"]
-  - [brew tap homebrew/bundle]
-  - [brew bundle --file=Brewfile]
+  - ['ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"']
