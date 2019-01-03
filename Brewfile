@@ -24,11 +24,11 @@ cask 'visual-studio-code'
 cask 'dropbox'
 cask 'slack'
 cask 'java'
+cask 'nomad'
 
 # Installing apps using brew
 brew 'sshfs'
 brew 'mas'
-brew 'nomad'
 brew 'docker'
 brew 'docker-compose'
 brew 'docker-machine'
