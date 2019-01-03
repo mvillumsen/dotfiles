@@ -57,6 +57,7 @@ Dotbot (or this repository) to help other people discover Dotbot.
 [thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
 [dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
 
+# Manual Configuration
 ## Set prezto as default shell
 ```
 zsh
