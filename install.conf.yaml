@@ -17,4 +17,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
-  - ['ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"']
+  - ['ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"', Installing HomeBrew]
+  - ['curl -s "https://get.sdkman.io" | bash']
+  - ['source ~/.sdkman/bin/sdkman-init.sh', Installing SDKMAN]
+  - [brew bundle]
