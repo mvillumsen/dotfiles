@@ -15,6 +15,8 @@
     ~/.vimrc: vim/vimrc
     ~/.zprezto/modules/prompt/functions/prompt_steeef-custom_setup: prompt_steeef-custom_setup
     ~/Library/Application\ Support/Code/User/settings.json: vscode/settings.json
+    /usr/local/bin/git-status-pretty: git-status-pretty
+    /usr/local/bin/workMount.sh: workMount.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
