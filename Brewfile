@@ -7,10 +7,9 @@ tap 'caskroom/cask'
 tap "mas-cli/tap"
 
 # Install apps using brew-cask
-cask '1password'
+cask 'osxfuse'
 cask 'font-hack-nerd-font'
 cask 'jetbrains-toolbox'
-cask 'sshfs'
 cask 'charles'
 cask 'iterm2'
 cask 'vlc'
@@ -22,8 +21,11 @@ cask 'spotify'
 cask 'sublime-text'
 cask 'visual-studio-code'
 cask 'dropbox'
+cask 'slack'
+cask 'java'
 
 # Installing apps using brew
+brew 'sshfs'
 brew 'mas'
 brew 'nomad'
 brew 'docker'
@@ -65,8 +67,5 @@ cask "cyberduck"
 mas "AdBlock", id: 1402042596
 mas "BetterSnapTool", id: 417375580
 mas "JPEGmini Lite", id: 525742250
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Skitch", id: 425955336
-mas "TinyExpander", id: 444088290
 mas "Wunderlist", id: 410628904
