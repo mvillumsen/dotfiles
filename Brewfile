@@ -8,6 +8,7 @@ tap "mas-cli/tap"
 
 # Install apps using brew-cask
 cask 'osxfuse'
+cask 'docker'
 cask 'font-hack-nerd-font'
 cask 'jetbrains-toolbox'
 cask 'charles'
