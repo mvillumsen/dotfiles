@@ -56,3 +56,15 @@ Dotbot (or this repository) to help other people discover Dotbot.
 [wazery_dotfiles]: https://github.com/wazery/dotfiles
 [thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
 [dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
+
+## Set prezto as default shell
+```
+zsh
+chsh -s /bin/zsh
+```
+## vim
+`:PlugInstall`
+
+## iTerm2
+Select Dracula color theme
+Set Hack Nerd Font
