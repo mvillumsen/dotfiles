@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap 'caskroom/cask'
 tap "mas-cli/tap"
+tap 'weaveworks/tap/eksctl'
 
 # Install apps using brew-cask
 cask 'osxfuse'
@@ -23,6 +24,7 @@ cask 'sublime-text'
 cask 'visual-studio-code'
 cask 'dropbox'
 cask 'slack'
+cask 'caprine'
 cask 'java'
 cask 'nomad'
 
