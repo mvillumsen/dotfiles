@@ -25,6 +25,7 @@ cask 'visual-studio-code'
 cask 'dropbox'
 cask 'slack'
 cask 'caprine'
+cask 'postman'
 cask 'java'
 cask 'nomad'
 
