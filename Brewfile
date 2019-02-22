@@ -73,3 +73,4 @@ mas "BetterSnapTool", id: 417375580
 mas "JPEGmini Lite", id: 525742250
 mas "Skitch", id: 425955336
 mas "Wunderlist", id: 410628904
+mas "CopyClip", id: 595191960
