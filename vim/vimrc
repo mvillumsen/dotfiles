@@ -63,6 +63,7 @@ let g:vim_json_syntax_conceal = 0
 Plug 'vim-scripts/nginx.vim'
 Plug 'vim-latex/vim-latex'
 Plug 'docker/docker'
+Plug 'hashivim/vim-terraform'
 
 " Markdown
 Plug 'tpope/vim-markdown', { 'for': 'ghmarkdown' }
