@@ -28,4 +28,5 @@ export SDKMAN_DIR="/Users/mvil/.sdkman"
 [[ -s "/Users/mvil/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mvil/.sdkman/bin/sdkman-init.sh"
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/Cellar/terraform/0.11.11/bin/terraform terraform
+
+complete -o nospace -C /usr/local/Cellar/terraform/0.11.12/bin/terraform terraform
