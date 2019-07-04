@@ -29,4 +29,43 @@ export SDKMAN_DIR="/Users/mvil/.sdkman"
 
 autoload -U +X bashcompinit && bashcompinit
 
-complete -o nospace -C /usr/local/Cellar/terraform/0.11.12/bin/terraform terraform
+complete -o nospace -C /usr/local/Cellar/terraform/0.12.3/bin/terraform terraform
+
+alias k='kubectl'
+alias kg='kubectl get'
+alias kgpo='kubectl get pod'
+alias kdpo='kubectl describe pods'
+alias kgdep='kubectl get deployment'
+alias kddep='kubectl describe deployment'
+alias kgsvc='kubectl get service'
+alias kdsvc='kubectl describe service'
+alias kging='kubectl get ingress'
+alias kding='kubectl describe ingress'
+alias klo='kubectl logs'
+alias kx="kubectl config use-context"
+
+# Cleanup squashed branches
+function ggsquashed() {
+  refs=$(git for-each-ref refs/heads/ "--format=%(refname:short)")
+
+  echo "$refs" |
+  while read -r branch
+  do
+    mergeBase=$(git merge-base HEAD $branch)
+
+    branchTree=$(git rev-parse $branch^{tree})
+
+    head=$(git commit-tree $branchTree -p $mergeBase -m _)
+
+    cherry=$(git cherry HEAD $head)
+
+    if [[ $cherry == "-"* ]]
+    then
+      git branch -D $branch
+    fi
+  done
+}
+
+# Cleanup merged branches and squashed branches
+alias gg='git pull --all --prune --ff-only && git branch --merged | grep -v -E "^\* " | xargs -I_ git branch -d _ && ggsquashed'
+
