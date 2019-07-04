@@ -11,3 +11,5 @@
 [core]
 	excludesfile = /Users/mvil/.gitignore
 	editor = /usr/local/bin/vim
+[push]
+	default = current
