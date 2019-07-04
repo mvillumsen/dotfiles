@@ -53,7 +53,7 @@ function ggsquashed() {
   do
     mergeBase=$(git merge-base HEAD $branch)
 
-    branchTree=$(git rev-parse $branch^{tree})
+    branchTree=$(git rev-parse "$branch^{tree}")
 
     head=$(git commit-tree $branchTree -p $mergeBase -m _)
 
