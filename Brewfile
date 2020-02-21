@@ -28,6 +28,7 @@ cask 'caprine'
 cask 'postman'
 cask 'java'
 cask 'nomad'
+cask "cyberduck"
 
 # Installing apps using brew
 brew 'sshfs'
@@ -65,7 +66,7 @@ brew "watch"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
-cask "cyberduck"
+brew 'bat'
 
 # Installing apps using App Store CLI
 mas "AdBlock", id: 1402042596
