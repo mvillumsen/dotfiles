@@ -29,7 +29,8 @@ export SDKMAN_DIR="/Users/mvil/.sdkman"
 
 autoload -U +X bashcompinit && bashcompinit
 
-complete -o nospace -C /usr/local/Cellar/terraform/0.12.3/bin/terraform terraform
+complete -o nospace -C /usr/local/Cellar/terraform/0.12.26/bin/terraform terraform
+alias tf=terraform
 
 alias k='kubectl'
 alias kg='kubectl get'
@@ -41,6 +42,7 @@ alias kgsvc='kubectl get service'
 alias kdsvc='kubectl describe service'
 alias kging='kubectl get ingress'
 alias kding='kubectl describe ingress'
+alias kge='kubectl get events --sort-by=.metadata.creationTimestamp'
 alias klo='kubectl logs'
 alias kx="kubectl config use-context"
 
@@ -69,3 +71,8 @@ function ggsquashed() {
 # Cleanup merged branches and squashed branches
 alias gg='git pull --all --prune --ff-only && git branch --merged | grep -v -E "^\* " | xargs -I_ git branch -d _ && ggsquashed'
 
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
