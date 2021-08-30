@@ -1,7 +1,80 @@
 {
-    "editor.formatOnSave": true,
-    "eslint.autoFixOnSave": true,
-    "workbench.colorTheme": "Dracula",
-    "materialTheme.autoApplyIcons": true,
-    "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 0,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.showTabs": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.associations": {
+    "[Jj]enkinsfile*": "groovy"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "terraform.languageServer": {
+    "external": true,
+    "pathToBinary": "",
+    "args": ["serve"],
+    "maxNumberOfProblems": 100,
+    "trace.server": "off"
+  },
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#5C6BC0",
+    "list.activeSelectionForeground": "#5C6BC0",
+    "list.inactiveSelectionForeground": "#5C6BC0",
+    "list.highlightForeground": "#5C6BC0",
+    "scrollbarSlider.activeBackground": "#5C6BC050",
+    "editorSuggestWidget.highlightForeground": "#5C6BC0",
+    "textLink.foreground": "#5C6BC0",
+    "progressBar.background": "#5C6BC0",
+    "pickerGroup.foreground": "#5C6BC0",
+    "tab.activeBorder": "#5C6BC0",
+    "notificationLink.foreground": "#5C6BC0",
+    "editorWidget.resizeBorder": "#5C6BC0",
+    "editorWidget.border": "#5C6BC0",
+    "settings.modifiedItemIndicator": "#5C6BC0",
+    "settings.headerForeground": "#5C6BC0",
+    "panelTitle.activeBorder": "#5C6BC0",
+    "breadcrumb.activeSelectionForeground": "#5C6BC0",
+    "menu.selectionForeground": "#5C6BC0",
+    "menubar.selectionForeground": "#5C6BC0",
+    "editor.findMatchBorder": "#5C6BC0",
+    "selection.background": "#5C6BC040"
+  },
+  "materialTheme.accent": "Indigo",
+  "prettier.printWidth": 100,
+  "prettier.requireConfig": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "material-icon-theme.activeIconPack": "react",
+  "java.semanticHighlighting.enabled": true,
+  "explorer.confirmDragAndDrop": false,
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.languageServer": "Microsoft",
+  "workbench.startupEditor": "newUntitledFile",
+  "aws.samcli.location": "/usr/local/bin/sam",
+  "aws.profile": "profile:tv2-sandbox",
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "Makefile*": "makefile"
+  },
+  "explorer.confirmDelete": false
 }
