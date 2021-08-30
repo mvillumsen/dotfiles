@@ -1,4 +1,6 @@
 # Remember configs: git, terminal (font, color theme etc.), VS Code, Sublime, JetBrains toolbox, Adobe toolbox
+tap "aws/tap"
+tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -67,11 +69,12 @@ brew "wget"
 brew "zsh"
 brew "zsh-completions"
 brew 'bat'
+brew 'gnu-sed'
 
 # Installing apps using App Store CLI
 mas "AdBlock", id: 1402042596
 mas "BetterSnapTool", id: 417375580
+mas "CopyClip", id: 595191960
+mas "iMovie", id: 408981434
 mas "JPEGmini Lite", id: 525742250
 mas "Skitch", id: 425955336
-mas "Wunderlist", id: 410628904
-mas "CopyClip", id: 595191960
