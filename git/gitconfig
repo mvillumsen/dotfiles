@@ -13,3 +13,5 @@
 	editor = /usr/local/bin/vim
 [push]
 	default = current
+[pull]
+	rebase = true
