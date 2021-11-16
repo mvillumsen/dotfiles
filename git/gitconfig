@@ -5,6 +5,7 @@
 	br = branch
 	co = checkout
 	unstage = reset HEAD --
+	pushfwl = push --force-with-lease
 [user]
 	name = Martin Villumsen
 	email = mvil@tv2.dk
