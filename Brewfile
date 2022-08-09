@@ -1,80 +1,73 @@
-# Remember configs: git, terminal (font, color theme etc.), VS Code, Sublime, JetBrains toolbox, Adobe toolbox
 tap "aws/tap"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap 'caskroom/cask'
 tap "mas-cli/tap"
-tap 'weaveworks/tap/eksctl'
+tap "txn2/tap"
+tap "norwoodj/tap"
+tap "warrensbox/tap"
 
-# Install apps using brew-cask
-cask 'osxfuse'
-cask 'docker'
-cask 'font-hack-nerd-font'
-cask 'jetbrains-toolbox'
-cask 'charles'
-cask 'iterm2'
-cask 'vlc'
-cask 'hipchat'
-cask 'cyberduck'
-cask 'google-chrome'
-cask 'firefox'
-cask 'spotify'
-cask 'sublime-text'
-cask 'visual-studio-code'
-cask 'dropbox'
-cask 'slack'
-cask 'caprine'
-cask 'postman'
-cask 'java'
-cask 'nomad'
-cask "cyberduck"
-
-# Installing apps using brew
-brew 'sshfs'
-brew 'mas'
-brew 'docker'
-brew 'docker-compose'
-brew 'docker-machine'
-brew 'tig'
-brew 'node'
-brew 'npm'
-brew 'htop'
-brew "ansible"
-brew "ansible-lint"
-brew "openssl"
+brew "python@3.9"
 brew "awscli"
+brew "node"
+brew "babel"
 brew "colordiff"
+brew "eksctl"
+brew "findutils"
 brew "fzf"
 brew "git"
 brew "git-flow"
+brew "glib"
+brew "gnu-sed"
 brew "gradle"
+brew "hadolint"
+brew "helm"
+brew "htop"
+brew "istioctl"
 brew "jq"
+brew "kind"
 brew "kubernetes-cli"
-brew "kubernetes-helm"
+brew "krew"
 brew "maven"
 brew "nmap"
+brew "nomad"
+brew "openjdk"
 brew "perl"
-brew "ruby", link: true
-brew "sshfs"
+brew "pipenv"
+brew "postgresql"
+brew "ruby"
+brew "stern"
 brew "telnet"
+brew "terraform-docs"
 brew "the_silver_searcher"
 brew "tig"
 brew "tree"
 brew "vim"
 brew "watch"
 brew "wget"
+brew "yq"
 brew "zsh"
 brew "zsh-completions"
-brew 'bat'
-brew 'gnu-sed'
-
-# Installing apps using App Store CLI
+brew "norwoodj/tap/helm-docs"
+brew "txn2/tap/kubefwd"
+brew "warrensbox/tap/tfswitch", link: false
+cask "docker"
+cask "font-hack-nerd-font"
+cask "google-chrome"
+cask "java"
+cask "nomad"
+cask "slack"
+cask "spotify"
+cask "visual-studio-code"
 mas "AdBlock", id: 1402042596
 mas "BetterSnapTool", id: 417375580
 mas "CopyClip", id: 595191960
 mas "iMovie", id: 408981434
+mas "Jira", id: 1475897096
 mas "JPEGmini Lite", id: 525742250
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Skitch", id: 425955336
