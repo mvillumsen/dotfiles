@@ -6,6 +6,7 @@
 	co = checkout
 	unstage = reset HEAD --
 	pushfwl = push --force-with-lease
+	sl = log --oneline --graph -50
 [user]
 	name = Martin Villumsen
 	email = mvil@tv2.dk
