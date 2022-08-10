@@ -57,16 +57,12 @@ brew "warrensbox/tap/tfswitch", link: false
 cask "docker"
 cask "font-hack-nerd-font"
 cask "google-chrome"
-cask "java"
 cask "nomad"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
-mas "AdBlock", id: 1402042596
 mas "BetterSnapTool", id: 417375580
 mas "CopyClip", id: 595191960
-mas "iMovie", id: 408981434
-mas "Jira", id: 1475897096
 mas "JPEGmini Lite", id: 525742250
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
