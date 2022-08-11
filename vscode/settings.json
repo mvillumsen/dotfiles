@@ -1,9 +1,7 @@
 {
-  "editor.formatOnSave": true,
   "eslint.enable": true,
   "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 0,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.editor.showTabs": true,
   "[yaml]": {
@@ -19,9 +17,6 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "files.associations": {
-    "[Jj]enkinsfile*": "groovy"
-  },
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -31,7 +26,9 @@
   "terraform.languageServer": {
     "external": true,
     "pathToBinary": "",
-    "args": ["serve"],
+    "args": [
+      "serve"
+    ],
     "maxNumberOfProblems": 100,
     "trace.server": "off"
   },
@@ -68,13 +65,81 @@
   "java.semanticHighlighting.enabled": true,
   "explorer.confirmDragAndDrop": false,
   "python.pythonPath": "/usr/local/bin/python3",
-  "python.languageServer": "Microsoft",
   "workbench.startupEditor": "newUntitledFile",
   "aws.samcli.location": "/usr/local/bin/sam",
-  "aws.profile": "profile:tv2-sandbox",
   "files.trimTrailingWhitespace": true,
   "files.associations": {
     "Makefile*": "makefile"
   },
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "groovyLint.insight.enable": false,
+  "groovyLint.basic.loglevel": "error",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "java.project.importHint": false,
+  "yaml.schemas": {},
+  "security.workspace.trust.untrustedFiles": "open",
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "graalvm.installations": [
+    "/Users/mvil/workspace/graalvm-ce-java11-21.2.0/Contents/Home"
+  ],
+  "graalvm.home": "/Users/mvil/workspace/graalvm-ce-java11-21.2.0/Contents/Home",
+  "netbeans.jdkhome": "/Users/mvil/workspace/graalvm-ce-java11-21.2.0/Contents/Home",
+  "terminal.integrated.env.osx": {
+    "GRAALVM_HOME": "/Users/mvil/workspace/graalvm-ce-java11-21.2.0/Contents/Home"
+  },
+  "java.home": "/Users/mvil/workspace/graalvm-ce-java11-21.2.0/Contents/Home",
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "/Users/mvil/workspace/graalvm-ce-java11-21.2.0/Contents/Home"
+    }
+  ],
+  "json.schemas": [],
+  "extensions.autoUpdate": false,
+  "snyk.yesWelcomeNotification": false
 }
