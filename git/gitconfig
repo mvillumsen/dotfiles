@@ -12,7 +12,7 @@
 	email = mvil@tv2.dk
 [core]
 	excludesfile = /Users/mvil/.gitignore
-	editor = /usr/local/bin/vim
+	editor = vim
 [push]
 	default = current
 [pull]
