@@ -70,4 +70,5 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+source <(kubectl completion zsh)
 alias python=/usr/bin/python3
