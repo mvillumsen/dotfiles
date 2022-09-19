@@ -9,6 +9,8 @@ tap "txn2/tap"
 tap "norwoodj/tap"
 tap "warrensbox/tap"
 
+# Lightweight terminal Zsh prompt https://spaceship-prompt.sh/
+brew "spaceship"
 brew "python@3.9"
 brew "awscli"
 brew "node"
