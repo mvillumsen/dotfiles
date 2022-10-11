@@ -35,6 +35,8 @@ alias gg='git pull --all --prune --ff-only && git branch --merged | grep -v -E "
 # Set Python alias
 alias python=/usr/bin/python3
 
+alias dgradlew='docker run --rm -it --workdir=/data -v $(pwd):/data adoptopenjdk/openjdk12:jdk-12.0.2_10-debian ./gradlew'
+
 # Cleanup squashed branches
 function ggsquashed() {
   refs=$(git for-each-ref refs/heads/ "--format=%(refname:short)")
