@@ -64,3 +64,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 source <(kubectl completion zsh)
 source /opt/homebrew/opt/spaceship/spaceship.zsh
+export PATH=$PATH:$HOME/bin
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
