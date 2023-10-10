@@ -37,4 +37,3 @@
 	program = gitsign
 [gitsign]
 	connectorID = https://github.com/login/oauth
-
