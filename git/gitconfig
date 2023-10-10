@@ -28,5 +28,12 @@
 	templateDir = /Users/mvil/.git-templates/git-secrets
 [gpg]
 	program = /opt/homebrew/bin/gpg
+	format = x509
 [commit]
 	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "x509"]
+	program = gitsign
+#[gitsign]
+#	connectorID = https://login.microsoftonline.com
