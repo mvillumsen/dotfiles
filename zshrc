@@ -67,5 +67,7 @@ source /opt/homebrew/opt/spaceship/spaceship.zsh
 export PATH=$PATH:$HOME/bin
 export PATH="${PATH}:${HOME}/.krew/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
 export GPG_TTY=$(tty)
 export GOPATH=$HOME/workspace/go
+
