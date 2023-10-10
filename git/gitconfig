@@ -35,5 +35,3 @@
 	gpgsign = true
 [gpg "x509"]
 	program = gitsign
-#[gitsign]
-#	connectorID = https://login.microsoftonline.com
