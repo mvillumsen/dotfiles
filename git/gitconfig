@@ -10,7 +10,7 @@
 [user]
 	name = Martin Villumsen
 	email = mvil@tv2.dk
-	signingkey = 84296D67FDA1AC07764806C7AFCE4D8174609E0E
+	signingkey = 41EC7222DD6E5771C9FDC86DE794C0F24C93D944
 [core]
 	excludesfile = /Users/mvil/.gitignore
 	editor = vim
