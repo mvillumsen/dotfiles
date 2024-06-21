@@ -8,12 +8,10 @@
 - link:
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
-    ~/.zprezto: prezto
     ~/.zpreztorc: zpreztorc
     ~/.zshrc: zshrc
     ~/.fzf.zsh: fzf.zsh
     ~/.vimrc: vim/vimrc
-    ~/.zprezto/modules/prompt/functions/prompt_steeef-custom_setup: prompt_steeef-custom_setup
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
