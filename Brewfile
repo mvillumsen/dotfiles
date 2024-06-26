@@ -57,7 +57,7 @@ cask "google-chrome"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
-mas "BetterSnapTool", id: 417375580
+cask "rectangle"
 mas "CopyClip", id: 595191960
 mas "JPEGmini Lite", id: 525742250
 mas "Keynote", id: 409183694
