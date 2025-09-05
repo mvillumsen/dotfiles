@@ -1,5 +1,4 @@
 [alias]
-	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
 	st = status
 	ci = commit
 	br = branch
@@ -27,6 +26,7 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templateDir = /Users/mvil/.git-templates/git-secrets
+	defaultBranch = main
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [commit]
