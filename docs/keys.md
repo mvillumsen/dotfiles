@@ -22,6 +22,71 @@ In this example, `ABCD1234EFGH5678` is the KEYID.
 
 ## SSH key setup
 
+### What is ed25519?
+
+`ed25519` is a modern public-key algorithm for SSH keys. For most users it is the default recommended choice over RSA for new keys because it is fast, secure, and uses shorter keys.
+
+### Recommended SSH key strategy
+
+- Minimum: one dedicated personal key for source control.
+- Better: one personal key and one work key (separate trust boundaries).
+- Avoid using one shared key for everything long-term.
+
+Suggested names:
+
+- `~/.ssh/id_ed25519_github_personal`
+- `~/.ssh/id_ed25519_github_work`
+
+Example config matching this setup:
+
+```sshconfig
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host github-private
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_github_personal
+  IdentitiesOnly yes
+
+Host github-tv2
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_github_work
+  IdentitiesOnly yes
+```
+
+Then use remotes like:
+
+- `git@github.com:OWNER/REPO.git` for private/default GitHub repos
+- `git@github-tv2:tv2/REPO.git` for TV2 repos
+
+### Git identity split by local path
+
+Keep your default identity in `~/.gitconfig`, then override by folder path:
+
+```ini
+[include]
+  path = ~/.gitconfig-private
+
+[includeIf "gitdir:~/workspace/tv2/"]
+  path = ~/.gitconfig-tv2
+```
+
+With this setup:
+
+- private identity is the default everywhere
+- repos under `~/workspace/tv2/` use the TV2 identity
+
+### Migrating from one id_rsa key
+
+1. Generate new ed25519 key(s).
+2. Add the new public key(s) to GitHub/GitLab.
+3. Update `~/.ssh/config` with your private default on `github.com` and `github-tv2` for TV2.
+4. Test with `ssh -T git@github.com` and `ssh -T git@github-tv2`.
+5. Rotate out old `id_rsa` once all repos authenticate with new key(s).
+
 If you already have a key backup:
 
 ```bash
@@ -44,19 +109,34 @@ eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
+Note: passphrases for SSH keys added this way are stored in Apple Keychain.
+Open Keychain Access and search for `id_ed25519` to find the related entries.
+
 Ensure SSH config includes keychain support:
 
 ```sshconfig
 Host *
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
+
+Host github-private
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_github_personal
+  IdentitiesOnly yes
+
+Host github-tv2
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_github_work
+  IdentitiesOnly yes
 ```
 
 Test GitHub SSH access:
 
 ```bash
 ssh -T git@github.com
+ssh -T git@github-tv2
 ```
 
 ## GPG key setup
