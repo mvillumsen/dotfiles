@@ -57,15 +57,15 @@ Dotbot (or this repository) to help other people discover Dotbot.
 [thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
 [dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
 
-# Manual Configuration
-## Set prezto as default shell
-```
-zsh
-chsh -s /bin/zsh
-```
-## vim
-`:PlugInstall`
+# Setup
 
-## iTerm2
-Select Dracula color theme
-Set Hack Nerd Font
+1. Install Homebrew and run `brew bundle` from this repository to install the package set from [Brewfile](Brewfile).
+2. Run `./install` to apply the Dotbot-managed symlinks.
+3. Open a new shell to pick up [zshrc](zshrc); it now initializes fzf and Starship directly without Prezto.
+4. For Vim, run `:PlugInstall` the first time after linking [vim/vimrc](vim/vimrc).
+5. In Ghostty, select a font with Nerd Font symbols and use your preferred theme settings.
+
+## Notes
+
+- The repo no longer depends on Prezto or the old custom prompt files.
+- If you want to change the prompt, update Starship rather than adding another zsh prompt layer.
