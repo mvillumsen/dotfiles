@@ -7,8 +7,8 @@
 
 - link:
     ~/.gitconfig: git/gitconfig
-  ~/.gitconfig-private: git/gitconfig-private
-  ~/.gitconfig-tv2: git/gitconfig-tv2
+    ~/.gitconfig-private: git/gitconfig-private
+    ~/.gitconfig-tv2: git/gitconfig-tv2
     ~/.gitignore: git/gitignore
     ~/.zshrc: zshrc
     ~/.fzf.zsh: fzf.zsh
