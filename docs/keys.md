@@ -78,6 +78,23 @@ With this setup:
 - private identity is the default everywhere
 - repos under `~/workspace/tv2/` use the TV2 identity
 
+### Git identity split by local path
+
+Keep your default identity in `~/.gitconfig`, then override by folder path:
+
+```ini
+[include]
+  path = ~/.gitconfig-private
+
+[includeIf "gitdir:~/workspace/tv2/"]
+  path = ~/.gitconfig-tv2
+```
+
+With this setup:
+
+- private identity is the default everywhere
+- repos under `~/workspace/tv2/` use the TV2 identity
+
 ### Migrating from one id_rsa key
 
 1. Generate new ed25519 key(s).
