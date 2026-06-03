@@ -1,4 +1,3 @@
-tap "warrensbox/tap"
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Official Amazon AWS command-line interface
@@ -51,8 +50,6 @@ brew "rtk"
 brew "starship"
 # User interface to the TELNET protocol
 brew "telnet"
-# Tool to build, change, and version infrastructure
-brew "terraform"
 # Code-search similar to ack
 brew "the_silver_searcher"
 # Text interface for Git repositories
@@ -73,8 +70,6 @@ brew "wget"
 brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
-# The tfswitch command lets you switch between terraform versions.
-brew "warrensbox/tap/tfswitch", link: false
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration

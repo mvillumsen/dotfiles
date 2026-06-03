@@ -27,9 +27,6 @@
       },
       "norwoodj/tap": {
         "revision": "a5f3252f1a286e0cabdbf9b96c5252fddd298252"
-      },
-      "warrensbox/tap": {
-        "revision": "d4c30a96fff1381e0258a345b6046dab0b9aae74"
       }
     },
     "brew": {
@@ -1564,13 +1561,6 @@
       "txn2/tap/kubefwd": {
         "version": "1.22.3",
         "bottle": false
-      },
-      "warrensbox/tap/tfswitch": {
-        "version": "0.13.1288",
-        "bottle": false,
-        "options": {
-          "link": false
-        }
       }
     },
     "cask": {
