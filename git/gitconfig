@@ -3,7 +3,7 @@
 	ci = commit
 	br = branch
 	co = checkout
-	unstage = reset HEAD --
+	unstage = restore --staged
 	pushfwl = push --force-with-lease
 	sl = log --oneline --graph -50
 [user]
@@ -11,7 +11,7 @@
 	email = mvil@tv2.dk
 	signingkey = 41EC7222DD6E5771C9FDC86DE794C0F24C93D944
 [core]
-	excludesfile = /Users/mvil/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 	pager = less -FRX
 [push]
@@ -25,10 +25,10 @@
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
-	templateDir = /Users/mvil/.git-templates/git-secrets
+	templateDir = ~/.git-templates/git-secrets
 	defaultBranch = main
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	program = gpg
 [commit]
 	gpgsign = true
 [tag]
