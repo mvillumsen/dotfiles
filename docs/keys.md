@@ -217,10 +217,10 @@ tar -C ~/key-restore-tmp -xzf ~/key-backup.tar.gz
 
 # 3) Restore SSH keys
 mkdir -p ~/.ssh && chmod 700 ~/.ssh
-cp ~/key-restore-tmp/id_ed25519 ~/.ssh/
-cp ~/key-restore-tmp/id_ed25519.pub ~/.ssh/
-chmod 600 ~/.ssh/id_ed25519
-chmod 644 ~/.ssh/id_ed25519.pub
+cp ~/key-restore-tmp/id_ed25519{,.pub} ~/.ssh/
+cp ~/key-restore-tmp/id_ed25519_github_work{,.pub} ~/.ssh/
+chmod 600 ~/.ssh/id_ed25519 ~/.ssh/id_ed25519_github_work
+chmod 644 ~/.ssh/id_ed25519.pub ~/.ssh/id_ed25519_github_work.pub
 
 # 4) Restore GPG keys and trust
 gpg --import ~/key-restore-tmp/gpg-secret.asc
