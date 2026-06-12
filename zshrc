@@ -33,10 +33,16 @@ autoload -Uz compinit
 compinit
 
 # zsh-autosuggestions
-[[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-[[ -f "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+if [[ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  source "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+elif [[ -f "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  source "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
 
 # zsh-syntax-highlighting should be sourced near the end of .zshrc.
-[[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-[[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+elif [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
