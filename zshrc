@@ -6,8 +6,12 @@ eval "$(starship init zsh)"
 
 export GPG_TTY="$(tty)"
 
+# Colorized ls output on macOS (BSD ls)
+export CLICOLOR=1
+
 
 # Aliases
+alias ls='ls -G'
 alias k='kubectl'
 alias kg='kubectl get'
 alias kgpo='kubectl get pod'
