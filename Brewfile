@@ -26,18 +26,10 @@ brew "go"
 brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
-# Kubernetes package manager
-brew "helm"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Run local Kubernetes cluster in Docker
-brew "kind"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
-# Mac App Store command-line interface
-brew "mas"
 # Port scanning utility for large networks
 brew "nmap"
 # Pinentry for GPG on Mac
@@ -56,8 +48,6 @@ brew "the_silver_searcher"
 brew "tig"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Language for application scale JavaScript development
-brew "typescript"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Vi 'workalike' with many additional features
@@ -80,8 +70,6 @@ brew "zsh-syntax-highlighting"
 cask "copilot-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# AI coding agent desktop client
-cask "opencode-desktop"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Music streaming service

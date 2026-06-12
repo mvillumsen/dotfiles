@@ -19,9 +19,6 @@
       "homebrew/core": {
         "revision": "89433ab2600c776f841c2b24f93a52ad14e7ec7f"
       },
-      "mas-cli/tap": {
-        "revision": "727f5ae53ac1c97728667921ccd17d89ae062507"
-      },
       "txn2/tap": {
         "revision": "ce1f9611a38eabe848fccc0c7d0963abe6cfc3fc"
       },
@@ -1633,44 +1630,6 @@
         "options": {
           "full_name": "visual-studio-code"
         }
-      }
-    },
-    "mas": {
-      "BetterSnapTool": {
-        "id": "417375580",
-        "version": "1.9.7"
-      },
-      "CopyClip": {
-        "id": "595191960",
-        "version": "1.9.8"
-      },
-      "iMovie": {
-        "id": "408981434",
-        "version": "10.3.4"
-      },
-      "Jira": {
-        "id": "1475897096",
-        "version": "148.0.0"
-      },
-      "JPEGmini Lite": {
-        "id": "525742250",
-        "version": "2.2.4"
-      },
-      "Keynote": {
-        "id": "409183694",
-        "version": "12.1"
-      },
-      "Numbers": {
-        "id": "409203825",
-        "version": "12.1"
-      },
-      "Pages": {
-        "id": "409201541",
-        "version": "12.1"
-      },
-      "Skitch": {
-        "id": "425955336",
-        "version": "2.9"
       }
     }
   },
