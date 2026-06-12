@@ -176,7 +176,7 @@ mkdir -p ~/key-backup-tmp
 # SSH (adjust file names if needed)
 cp ~/.ssh/id_ed25519 ~/key-backup-tmp/
 cp ~/.ssh/id_ed25519.pub ~/key-backup-tmp/
-
+cp ~/.ssh/id_ed25519_github_work{,.pub} ~/key-backup-tmp/
 # GPG (replace KEYID)
 gpg --armor --export-secret-keys <KEYID> > ~/key-backup-tmp/gpg-secret.asc
 gpg --armor --export <KEYID> > ~/key-backup-tmp/gpg-public.asc
