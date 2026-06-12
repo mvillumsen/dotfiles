@@ -1,20 +1,17 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-# Customize to your needs...
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(starship init zsh)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 
-export GPG_TTY=$(tty)
+export GPG_TTY="$(tty)"
+
+# Colorized ls output on macOS (BSD ls)
+export CLICOLOR=1
 
 
 # Aliases
+alias ls='ls -G'
 alias k='kubectl'
 alias kg='kubectl get'
 alias kgpo='kubectl get pod'

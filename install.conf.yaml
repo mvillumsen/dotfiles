@@ -8,7 +8,6 @@
 - link:
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
-    ~/.zpreztorc: zpreztorc
     ~/.zshrc: zshrc
     ~/.fzf.zsh: fzf.zsh
     ~/.vimrc: vim/vimrc
