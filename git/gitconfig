@@ -1,3 +1,7 @@
+[user]
+	name = Martin Villumsen
+	email = mvillumsen@gmail.com
+	signingkey = F16873A897E3FAF9
 [alias]
 	st = status
 	ci = commit
@@ -6,8 +10,6 @@
 	unstage = restore --staged
 	pushfwl = push --force-with-lease
 	sl = log --oneline --graph -50
-[include]
-	path = ~/.gitconfig-private
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim

@@ -82,5 +82,5 @@ endif
 " Trim trailing whitespace on common text/code files
 augroup user_trim_whitespace
   autocmd!
-  autocmd BufWritePre *.py,*.js,*.ts,*.tsx,*.go,*.tf,*.yaml,*.yml,*.md :%s/\s\+$//e
+  autocmd BufWritePre *.py,*.js,*.ts,*.tsx,*.go,*.tf,*.yaml,*.yml :%s/\s\+$//e
 augroup END

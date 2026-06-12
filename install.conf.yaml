@@ -13,6 +13,7 @@
     ~/.zshrc: zshrc
     ~/.fzf.zsh: fzf.zsh
     ~/.vimrc: vim/vimrc
+    ~/Library/Application Support/com.mitchellh.ghostty/config.ghostty: ghostty/config.ghostty
 
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
