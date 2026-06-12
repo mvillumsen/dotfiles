@@ -34,9 +34,8 @@ In this example, `ABCD1234EFGH5678` is the KEYID.
 
 Suggested names:
 
-- `~/.ssh/id_ed25519_github_personal`
+- `~/.ssh/id_ed25519`
 - `~/.ssh/id_ed25519_github_work`
-
 Example config matching this setup:
 
 ```sshconfig
