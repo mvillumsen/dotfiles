@@ -70,6 +70,12 @@ brew "wget"
 brew "yq"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Fish-like command autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
