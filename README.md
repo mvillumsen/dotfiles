@@ -1,71 +1,120 @@
-Dotfiles Template
-=================
+Dotfiles
+========
 
-This is a template repository for bootstrapping your dotfiles with [Dotbot][dotbot].
+Personal dotfiles for macOS, bootstrapped with Dotbot.
 
-To get started, you can [fork][fork] this repository (and probably delete this
-README and rename your version to something like just `dotfiles`).
+## Fresh Mac Setup
 
-In general, you should be using symbolic links for everything, and using git
-submodules whenever possible.
+### 1) Install Homebrew
 
-To keep submodules at their proper versions, you could include something like
-`git submodule update --init --recursive` in your `install.conf.yaml`.
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-To upgrade your submodules to their latest versions, you could periodically run
-`git submodule update --init --remote`.
+### 2) Setup or restore SSH key (for GitHub)
 
-Inspiration
------------
+If you already have a key backup:
 
-If you're looking for inspiration for how to structure your dotfiles or what
-kinds of things you can include, you could take a look at some repos using
-Dotbot.
+```bash
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+# Copy your private/public key pair into ~/.ssh, for example id_ed25519 and id_ed25519.pub
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+```
 
-* [anishathalye's dotfiles][anishathalye_dotfiles]
-* [csivanich's dotfiles][csivanich_dotfiles]
-* [m45t3r's dotfiles][m45t3r_dotfiles]
-* [alexwh's dotfiles][alexwh_dotfiles]
-* [azd325's dotfiles][azd325_dotfiles]
-* [bluekeys' dotfiles][bluekeys_dotfiles]
-* [wazery's dotfiles][wazery_dotfiles]
-* [thirtythreeforty's dotfiles][thirtythreeforty_dotfiles]
+If you need to create a new key:
 
-And there are about [700 more here][dotbot-users].
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
 
-If you're using Dotbot and you'd like to include a link to your dotfiles here
-as an inspiration to others, please submit a pull request.
+Add key to the agent and macOS keychain:
 
-License
--------
+```bash
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
 
-This software is hereby released into the public domain. That means you can do
-whatever you want with it without restriction. See `LICENSE.md` for details.
+Ensure SSH config includes keychain support:
 
-That being said, I would appreciate it if you could maintain a link back to
-Dotbot (or this repository) to help other people discover Dotbot.
+```sshconfig
+Host *
+	AddKeysToAgent yes
+	UseKeychain yes
+```
 
-[dotbot]: https://github.com/anishathalye/dotbot
-[fork]: https://github.com/anishathalye/dotfiles_template/fork
-[anishathalye_dotfiles]: https://github.com/anishathalye/dotfiles
-[csivanich_dotfiles]: https://github.com/csivanich/dotfiles
-[m45t3r_dotfiles]: https://github.com/m45t3r/dotfiles
-[alexwh_dotfiles]: https://github.com/alexwh/dotfiles
-[azd325_dotfiles]: https://github.com/Azd325/dotfiles
-[bluekeys_dotfiles]: https://github.com/bluekeys/.dotfiles
-[wazery_dotfiles]: https://github.com/wazery/dotfiles
-[thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
-[dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
+Test GitHub SSH access:
 
-# Setup
+```bash
+ssh -T git@github.com
+```
 
-1. Install Homebrew and run `brew bundle` from this repository to install the package set from [Brewfile](Brewfile).
-2. Run `./install` to apply the Dotbot-managed symlinks.
-3. Open a new shell to pick up [zshrc](zshrc); it now initializes fzf and Starship directly without Prezto.
-4. For Vim, run `:PlugInstall` the first time after linking [vim/vimrc](vim/vimrc).
-5. In Ghostty, select a font with Nerd Font symbols and use your preferred theme settings.
+### 3) Clone this repo
+
+```bash
+git clone git@github.com:mvillumsen/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+```
+
+### 4) Install packages from Brewfile
+
+```bash
+brew bundle
+```
+
+This installs the current baseline, including Ghostty, zsh, fzf, Starship, and VS Code extensions listed in [Brewfile](Brewfile).
+
+### 5) Apply dotfiles (symlinks)
+
+```bash
+./install
+```
+
+### 6) (Optional) Set Homebrew zsh as default shell
+
+```bash
+chsh -s "$(brew --prefix)/bin/zsh"
+```
+
+Open a new terminal session after this.
+
+### 7) Setup or restore GPG key (for signed commits)
+
+Use the dedicated key guide for GPG setup, backup, restore, and iCloud storage:
+
+- [docs/keys.md](docs/keys.md)
+- [docs/new-mac-checklist.md](docs/new-mac-checklist.md)
+
+## What This Repo Uses
+
+- Shell: zsh + [Starship](https://starship.rs/) + zsh-completions + zsh-autosuggestions + zsh-syntax-highlighting (no Prezto)
+- Fuzzy finder: fzf via [fzf.zsh](fzf.zsh)
+- Terminal: [Ghostty](https://ghostty.org/)
+- Git config: [git/gitconfig](git/gitconfig)
+- Vim config: [vim/vimrc](vim/vimrc)
 
 ## Notes
 
-- The repo no longer depends on Prezto or the old custom prompt files.
-- If you want to change the prompt, update Starship rather than adding another zsh prompt layer.
+- VS Code settings are synced through GitHub account sync.
+- If you change prompt behavior, prefer updating Starship instead of adding another prompt framework.
+- Run `:PlugInstall` in Vim once after first setup (if you want the configured Vim plugins).
+- If zsh shows an `insecure directories` warning when loading completions, run:
+
+```bash
+chmod -R go-w "$(brew --prefix)/share/zsh"
+compaudit | xargs chmod g-w
+rm -f ~/.zcompdump
+exec zsh
+```
+
+## Key Management
+
+For SSH and GPG key management, backups, and restore steps, see:
+
+- [docs/keys.md](docs/keys.md)
+
+## New Mac Verification
+
+For a detailed post-setup checklist (including non-iCloud folders and security checks), see:
+
+- [docs/new-mac-checklist.md](docs/new-mac-checklist.md)

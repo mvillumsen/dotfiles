@@ -9,7 +9,6 @@ export GPG_TTY="$(tty)"
 # Colorized ls output on macOS (BSD ls)
 export CLICOLOR=1
 
-
 # Aliases
 alias ls='ls -G'
 alias k='kubectl'
@@ -27,4 +26,19 @@ alias klo='kubectl logs'
 alias kx="kubectl config use-context"
 alias python=/usr/bin/python3
 alias tf=terraform
+
+# # Add Homebrew zsh-completions to fpath
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
+# Completion system
+autoload -Uz compinit
+compinit
+
+# zsh-autosuggestions
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# zsh-syntax-highlighting should be sourced near the end of .zshrc.
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
