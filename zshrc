@@ -2,7 +2,7 @@
 # Executes commands at the start of an interactive session.
 #
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(starship init zsh)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 
 export GPG_TTY="$(tty)"
 
